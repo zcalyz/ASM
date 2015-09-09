@@ -13,18 +13,28 @@
 			<artifactId>log4j</artifactId>
 			<version>1.2.14</version>
 		</dependency>
+
 		<dependency>
-			<groupId>asm</groupId>
+			<groupId>org.ow2.asm</groupId>
 			<artifactId>asm</artifactId>
-			<version>3.2</version>
+			<version>4.1</version>
 		</dependency>
-			<dependency>
+		<dependency>
+			<groupId>org.ow2.asm</groupId>
+			<artifactId>asm-commons</artifactId>
+			<version>4.1</version>
+		</dependency>
+		<dependency>
 			<groupId>javax</groupId>
 			<artifactId>javaee-api</artifactId>
 			<version>7.0</version>
 		</dependency>
-		
 
+		<dependency>
+			<groupId>com.jolira</groupId>
+			<artifactId>asm</artifactId>
+			<version>3.3.0</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<finalName>Execise</finalName>
