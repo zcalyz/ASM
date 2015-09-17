@@ -10,8 +10,6 @@ import org.objectweb.asm.commons.AdviceAdapter;
 
 public class MyCodeModify extends ClassVisitor{
 
-
-	
 	 public MyCodeModify(int api, ClassVisitor cv) {
 		super(api, cv);
 		// TODO Auto-generated constructor stub
@@ -28,7 +26,7 @@ public class MyCodeModify extends ClassVisitor{
 		       
 	      return cv.visitMethod(access, name, desc, signature, exceptions);
 	  }
-	 
+	 //自定义MethodVisitor
 	 private class MyMethodVisitor extends AdviceAdapter{
 		 int newLocal;
 	
@@ -51,8 +49,6 @@ public class MyCodeModify extends ClassVisitor{
 			
 			mv.visitVarInsn(Opcodes.ASTORE, newLocal);			
 			mv.visitVarInsn(Opcodes.ALOAD, newLocal);
-//			mv.visitVarInsn(Opcodes.ASTORE, 1);
-//			mv.visitVarInsn(Opcodes.ALOAD, 1);
 			mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, targetName, "before", "()V");
 		 }
 		

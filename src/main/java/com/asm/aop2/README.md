@@ -1,0 +1,2 @@
+1拦截自定义classloader(MyUrlCLassLoader),利用URLClassLoader的addURL(url)方法为其扩展 类加载路径
+2 注意有参的构造函数如何利用asm调用 

@@ -3,7 +3,7 @@ package com.asm.aop;
 public class MyAdvice extends Advice{
 	@Override
 	public void before(){
-		System.out.println("My before method !");
+	   System.out.println("My before method !");
 	}
 	
 	@Override
